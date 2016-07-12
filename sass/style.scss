@@ -1,0 +1,50 @@
+@charset "utf-8";
+@import "compass/css3";
+//@import "normalize";
+@import "compass/reset";
+@import "compass/utilities";
+
+#sexy-slider{
+    position: relative;
+    width:618px;
+    height: 246px;
+    @include clearfix;
+    box-sizing:content-box;
+    border-radius: 5px;
+    border:10px solid #C0C0C0;
+    ul{
+        position: relative;
+       li{
+           &:first-child{
+               z-index: 10;
+           }
+           position: absolute;
+            a{
+                img{
+                    
+                }
+            }
+        } 
+    }
+    ol{
+        bottom:20px;
+        right:5%;
+        position: absolute;
+        z-index: 100;
+        li{
+            cursor:pointer;
+           float:left;
+           width:22px;
+           height: 22px;
+           background: url(../img/bullets.png) no-repeat;
+           background-position: 0 0; 
+           &.curr{
+               background-position: 0 -22px;
+           }
+        }
+    }
+    
+}
+
+
+
