@@ -1,0 +1,128 @@
+@import "compass/css3";
+.animated{
+    @include animation-duration(500ms);
+    @include animation-fill-mode(forwards);
+}
+
+@include keyframes(fadeOut){        //fadeOut
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+.fadeOut{
+    @include animation-name(fadeOut);
+}
+
+@include keyframes(fadeIn){        //fadeIn
+    from{
+        opacity:0;
+    }
+    to{
+        opacity:1;
+    }
+}
+.fadeIn{
+    @include animation-name(fadeIn);
+}
+
+@include keyframes(flash){      //flash
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.flash{
+    @include animation-name(flash);
+    @include animation-iteration-count(2);
+    @include animation-timing-function(linear);
+    @include animation-duration(600ms);
+}
+
+@include keyframes(bounce){     //bounce
+    0%{
+        @include transform(translateY(-90px) translateX(0px));
+    }
+    50%{
+        @include transform(translateY(0) translateX(0px));
+    }
+    75%{
+        @include transform(translateY(-10px) translateX(0px));
+    }
+    100%{
+        @include transform(translateY(0px) translateX(0px));
+    }
+}
+.bounce{
+    @include animation-name(bounce);
+    @include transform-origin(50% 50% 0);
+    @include animation-fill-mode(none);
+    @include animation-timing-function(ease-out);
+}
+
+@include keyframes(shake){          //shake
+    from{
+        @include transform(translateY(0px) translateX(-10px));
+    }
+    to{
+        @include transform(translateY(0px) translateX(10px));
+    }
+}
+
+.shake{
+    @include animation-name(shake);
+    @include animation-fill-mode(none);
+    @include animation-direction(alternate);
+    @include animation-iteration-count(4);
+    @include animation-timing-function(linear);
+    @include animation-duration(100ms);
+}
+
+@include keyframes(pulse){          //pluse
+    0%{
+        @include transform(scaleX(1) scaleY(1));
+    }
+    30%{
+        @include transform(scaleX(1.15) scaleY(1.15));
+    }
+    100%{
+        @include transform(scaleX(1) scaleY(1));
+    }
+}
+.pulse{
+    @include animation-name(pulse);
+    @include animation-delay(300ms);
+}
+
+@include keyframes(swing){              //swing
+    0%{
+        @include transform(rotateZ(0));
+    }
+    20%{
+        @include transform(rotateZ(20deg));
+    }
+    40%{
+        @include transform(rotateZ(-20deg));
+    }
+    60%{
+        @include transform(rotateZ(10deg));
+    }
+    80%{
+        @include transform(rotateZ(-10deg));
+    }
+    100%{
+        @include transform(rotateZ(0));
+    }
+}
+.swing{
+    @include animation-name(swing);
+    @include animation-fill-mode(none);
+}
+

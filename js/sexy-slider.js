@@ -10,7 +10,7 @@
 			vertical:10,
 			index:0,
 			speed:4000,
-			delay:50
+			delay:100
 		};
 				
 		$.extend(true,this,this.settings,params||{});		
@@ -57,6 +57,7 @@
 					item.css({
 						width:width,
 						height:height,
+						display:"block",
 						position:'absolute',
 						top:i*height,
 						left:j*width
@@ -86,11 +87,12 @@
 				var delay = 0;
 				for(var i = 0; i<y_length; i++){
 					for(var j = 0; j<x_length; j++){
-						window.setTimeout(function(){
-							imgList[j][i].addClass("animated fadeOutLeft");
-						},20);
+						(function(m,n){
+							window.setTimeout(function(){
+							imgList[m][n].addClass("animated rollOut");
+							},delay + me.delay*m);
+						})(i,j);
 					}
-					delay+=me.delay;
 				}
 			};
 			

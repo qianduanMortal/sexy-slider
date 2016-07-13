@@ -79,21 +79,25 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   position: relative;
 }
 /* line 17, ../sass/style.scss */
+#sexy-slider ul span {
+  transform-origin: right bottom;
+}
+/* line 20, ../sass/style.scss */
 #sexy-slider ul li {
   position: absolute;
 }
-/* line 18, ../sass/style.scss */
+/* line 21, ../sass/style.scss */
 #sexy-slider ul li:first-child {
   z-index: 10;
 }
-/* line 29, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 #sexy-slider ol {
   bottom: 20px;
   right: 5%;
   position: absolute;
   z-index: 100;
 }
-/* line 34, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 #sexy-slider ol li {
   cursor: pointer;
   float: left;
@@ -102,7 +106,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   background: url(../img/bullets.png) no-repeat;
   background-position: 0 0;
 }
-/* line 41, ../sass/style.scss */
+/* line 44, ../sass/style.scss */
 #sexy-slider ol li.curr {
   background-position: 0 -22px;
 }
